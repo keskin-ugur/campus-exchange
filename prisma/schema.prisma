@@ -1,0 +1,67 @@
+// Bu, veritabanımızın mimari planıdır.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. KULLANICI MODELİ
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String   @unique // YENİ: Kullanıcı Adı (Eşsiz)
+  name      String?
+  password  String
+  points    Int      @default(0)
+  createdAt DateTime @default(now())
+  
+  notes     Note[]
+  purchases Purchase[]
+}
+
+
+// 2. NOT MODELİ
+model Note {
+  id        String   @id @default(cuid())
+  title     String   // Not başlığı
+  content   String   // Not içeriği
+  course    String?  // Ders adı (örn: MAT101)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt // Düzenlenirse otomatik güncellenir
+
+  // Doğrulama alanları
+  verificationStatus String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  isVerified         Boolean  @default(false)     // Hızlı sorgulama için
+  rejectionReason    String?                      // Red nedeni (varsa)
+  verifiedAt         DateTime?                    // Doğrulama zamanı
+
+  // İlişki: Bu notu kim yazdı?
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  
+  // İlişki: Bu notu kimler satın aldı?
+  purchases Purchase[]
+}
+
+// 3. SATIN ALMA KAYDI (YENİ TABLO)
+// Kim, hangi notu, ne zaman satın aldı?
+model Purchase {
+  id        String   @id @default(cuid())
+  
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  
+  noteId    String
+  note      Note     @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now()) // Satın alma zamanı
+
+  // ÖNEMLİ KURAL: Bir kullanıcı aynı notu 2 kere satın alamasın.
+  // Bu ikili (userId + noteId) eşsiz olmalı.
+  @@unique([userId, noteId])
+}
