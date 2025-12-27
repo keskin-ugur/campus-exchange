@@ -10,7 +10,7 @@
 
 Yönetim Bilişim Sistemleri (YBS) vizyonuyla geliştirilen bu proje, öğrencilerin temel ihtiyaçlarına teknolojik çözümler sunmayı hedefler.
 
-🔗 **Canlı Demo:** [Buraya Netlify Site Linkinizi Yapıştırın](https://proje-adiniz.netlify.app)
+🔗 **Canlı Demo:** [CampusExchange](https://campusexchanges.netlify.app)
 
 ---
 
