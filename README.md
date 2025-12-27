@@ -16,10 +16,9 @@ Yönetim Bilişim Sistemleri (YBS) vizyonuyla geliştirilen bu proje, öğrencil
 
 ## 🚀 Proje Hakkında
 
-Bu platform iki ana soruna çözüm üretmek için tasarlanmıştır:
+Bu platform önemli bir soruna çözüm üretmek için tasarlanmıştır:
 
-1. **Ekonomik Dayanışma (Askıda Ürün):** Öğrencilerin birbirlerine anonim olarak simit, çay, yemek veya kırtasiye malzemesi ısmarlayabildiği dijital bir "Pay-it-forward" sistemi.
-2. **Nitelikli Bilgi Paylaşımı (AI Destekli Notlar):** Öğrencilerin ders notlarını paylaştığı, içeriklerin ise **Google Gemini AI** tarafından otomatik olarak analiz edilip onaylandığı akıllı bir kaynak havuzu.
+**Nitelikli Bilgi Paylaşımı (AI Destekli Notlar):** Öğrencilerin ders notlarını paylaştığı, içeriklerin ise **Google Gemini AI** tarafından otomatik olarak analiz edilip onaylandığı akıllı bir kaynak havuzu.
 
 ---
 
