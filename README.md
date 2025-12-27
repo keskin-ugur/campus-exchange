@@ -25,7 +25,7 @@ Bu platform önemli bir soruna çözüm üretmek için tasarlanmıştır:
 ## ✨ Temel Özellikler
 
 * **⚡ Next.js App Router:** React'in en güncel mimarisi ile yüksek performanslı, Server-Side Rendering (SSR) destekli yapı.
-* **🤖 AI Tabanlı İçerik Denetimi:** Yüklenen ders notları, Google Gemini API'a gönderilir. Sistem, içeriğin gerçekten bir ders notu olup olmadığını ve hangi derse ait olduğunu semantik olarak analiz eder. "Sohbet dili" içeren değersiz içerikleri otomatik reddeder.
+* **🤖 AI Tabanlı İçerik Denetimi:** Yüklenen ders notları, Google Gemini API'a gönderilir. Sistem, içeriğin gerçekten bir ders notu olup olmadığını semantik olarak analiz eder. "Sohbet dili" içeren değersiz içerikleri otomatik reddeder.
 * **🗄️ Güçlü Veritabanı Yapısı:** PostgreSQL ve Prisma ORM kullanılarak ilişkisel veri tabanı yönetimi sağlanmıştır.
 * **🔒 Güvenli Veri Akışı:** Next.js Server Actions ve Zod kütüphanesi ile güvenli form validasyonları.
 * **🎨 Modern UI/UX:** Tailwind CSS ile geliştirilmiş, mobil uyumlu ve kullanıcı dostu arayüz.
