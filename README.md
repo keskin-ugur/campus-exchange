@@ -1,4 +1,4 @@
-# 🎓 Campus Exchange - Öğrenci Dayanışma ve Kaynak Paylaşım Platformu
+# 🎓 Campus Exchange - Öğrenci Kaynak Paylaşım Platformu
 
 ![Project Status](https://img.shields.io/badge/status-live-success?style=flat&color=2ea44f)
 ![Framework](https://img.shields.io/badge/Next.js-14-black?style=flat&logo=next.js)
@@ -6,9 +6,9 @@
 ![AI Power](https://img.shields.io/badge/AI-Google%20Gemini-8E75B2?style=flat&logo=googlebard)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-**Campus Exchange**, üniversite kampüslerindeki yardımlaşmayı dijitalleştiren ve akademik bilgi paylaşımını **Yapay Zeka (AI)** ile denetleyerek kaliteyi artıran modern bir web platformudur.
+**Campus Exchange**, akademik bilgi paylaşımını dijitalleştiren ve **Yapay Zeka (AI)** ile denetleyerek kaliteyi artıran modern bir web platformudur.
 
-Yönetim Bilişim Sistemleri (YBS) vizyonuyla geliştirilen bu proje, öğrencilerin temel ihtiyaçlarına teknolojik çözümler sunmayı hedefler.
+Yönetim Bilişim Sistemleri (YBS) vizyonuyla geliştirilen bu proje, öğrencilerin ihtiyaçlarına teknolojik çözümler sunmayı hedefler.
 
 🔗 **Canlı Demo:** [CampusExchange](https://campusexchanges.netlify.app)
 
