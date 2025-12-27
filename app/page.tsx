@@ -55,29 +55,33 @@ export default async function Home({
   return (
     <main className="flex min-h-screen flex-col items-center px-6 pb-10 bg-gray-100 relative">
 
-      {/* --- SOL ÜST KÖŞE (Giriş/Profil) --- */}
-      <div className="absolute top-5 left-5 z-10">
-        {username ? (
-          <a href="/profil" className="text-sm font-medium text-gray-600 hover:text-blue-600 flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow transition border border-gray-100">
-            👤 Profilim <span className="text-xs text-gray-400">(@{username})</span>
-          </a>
-        ) : (
-          <a href="/login" className="text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 flex items-center gap-2 px-6 py-2 rounded-full shadow-md hover:shadow-lg transition">
-            🔑 Giriş Yap
-          </a>
+      {/* --- ÜST HEADER (MOBİL: Flex, DESKTOP: Absolute) --- */}
+      <div className="w-full flex justify-between items-center p-4 md:p-0 relative md:static z-20">
+
+        {/* SOL ÜST: Giriş/Profil */}
+        <div className="md:absolute md:top-5 md:left-5">
+          {username ? (
+            <a href="/profil" className="text-sm font-medium text-gray-600 hover:text-blue-600 flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow transition border border-gray-100">
+              👤 Profilim <span className="text-xs text-gray-400">(@{username})</span>
+            </a>
+          ) : (
+            <a href="/login" className="text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 flex items-center gap-2 px-6 py-2 rounded-full shadow-md hover:shadow-lg transition">
+              🔑 Giriş Yap
+            </a>
+          )}
+        </div>
+
+        {/* SAĞ ÜST: Puan Bilgisi */}
+        {currentUser && (
+          <div className="md:absolute md:top-5 md:right-5 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100 flex items-center gap-2 animate-in fade-in slide-in-from-top-4">
+            <span className="text-sm text-gray-500 font-medium">Puanın:</span>
+            <span className="text-lg font-bold text-blue-600">{currentUser.points}</span>
+          </div>
         )}
       </div>
 
-      {/* Sağ Üst: Puan Bilgisi */}
-      {currentUser && (
-        <div className="absolute top-5 right-5 z-10 bg-white px-4 py-2 rounded-full shadow-md border border-blue-100 flex items-center gap-2 animate-in fade-in slide-in-from-top-4">
-          <span className="text-sm text-gray-500 font-medium">Puanın:</span>
-          <span className="text-lg font-bold text-blue-600">{currentUser.points}</span>
-        </div>
-      )}
-
       {/* --- LOGO ALANI (ESKİ H1 YERİNE) --- */}
-      <div className="relative w-[400px] h-[120px] shrink-0 mt-2">
+      <div className="relative w-full max-w-[400px] h-[120px] shrink-0 mt-4 md:mt-2">
         <Image
           src="/other/logo.svg"
           alt="Campus Exchange Logo"
