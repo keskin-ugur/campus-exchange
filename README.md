@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Campus Exchange - Öğrenci Dayanışma ve Kaynak Paylaşım Platformu
 
-## Getting Started
+![Project Status](https://img.shields.io/badge/status-live-success?style=flat&color=2ea44f)
+![Framework](https://img.shields.io/badge/Next.js-14-black?style=flat&logo=next.js)
+![Database](https://img.shields.io/badge/PostgreSQL-Prisma-blue?style=flat&logo=postgresql)
+![AI Power](https://img.shields.io/badge/AI-Google%20Gemini-8E75B2?style=flat&logo=googlebard)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-First, run the development server:
+**Campus Exchange**, üniversite kampüslerindeki yardımlaşmayı dijitalleştiren ve akademik bilgi paylaşımını **Yapay Zeka (AI)** ile denetleyerek kaliteyi artıran modern bir web platformudur.
+
+Yönetim Bilişim Sistemleri (YBS) vizyonuyla geliştirilen bu proje, öğrencilerin temel ihtiyaçlarına teknolojik çözümler sunmayı hedefler.
+
+🔗 **Canlı Demo:** [Buraya Netlify Site Linkinizi Yapıştırın](https://proje-adiniz.netlify.app)
+
+---
+
+## 🚀 Proje Hakkında
+
+Bu platform iki ana soruna çözüm üretmek için tasarlanmıştır:
+
+1. **Ekonomik Dayanışma (Askıda Ürün):** Öğrencilerin birbirlerine anonim olarak simit, çay, yemek veya kırtasiye malzemesi ısmarlayabildiği dijital bir "Pay-it-forward" sistemi.
+2. **Nitelikli Bilgi Paylaşımı (AI Destekli Notlar):** Öğrencilerin ders notlarını paylaştığı, içeriklerin ise **Google Gemini AI** tarafından otomatik olarak analiz edilip onaylandığı akıllı bir kaynak havuzu.
+
+---
+
+## ✨ Temel Özellikler
+
+* **⚡ Next.js App Router:** React'in en güncel mimarisi ile yüksek performanslı, Server-Side Rendering (SSR) destekli yapı.
+* **🤖 AI Tabanlı İçerik Denetimi:** Yüklenen ders notları, Google Gemini API'a gönderilir. Sistem, içeriğin gerçekten bir ders notu olup olmadığını ve hangi derse ait olduğunu semantik olarak analiz eder. "Sohbet dili" içeren değersiz içerikleri otomatik reddeder.
+* **🗄️ Güçlü Veritabanı Yapısı:** PostgreSQL ve Prisma ORM kullanılarak ilişkisel veri tabanı yönetimi sağlanmıştır.
+* **🔒 Güvenli Veri Akışı:** Next.js Server Actions ve Zod kütüphanesi ile güvenli form validasyonları.
+* **🎨 Modern UI/UX:** Tailwind CSS ile geliştirilmiş, mobil uyumlu ve kullanıcı dostu arayüz.
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+| Kategori | Teknoloji | Açıklama |
+| :--- | :--- | :--- |
+| **Frontend** | ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js&logoColor=white) | App Router & Server Components |
+| **Dil** | ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) | Tip güvenliği için |
+| **Stil** | ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | Hızlı UI tasarımı |
+| **Backend & DB** | ![Prisma](https://img.shields.io/badge/-Prisma-2D3748?style=flat&logo=prisma&logoColor=white) | ORM ve Veritabanı Yönetimi |
+| **Yapay Zeka** | ![Gemini](https://img.shields.io/badge/-Google_Gemini-8E75B2?style=flat&logo=googlebard&logoColor=white) | İçerik Analizi ve Sınıflandırma |
+| **Deploy** | ![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white) | CI/CD ve Hosting |
+
+---
+
+## ⚙️ Kurulum ve Çalıştırma (Local Development)
+
+Projeyi kendi bilgisayarınızda geliştirmek için aşağıdaki adımları takip edebilirsiniz.
+
+### 1. Projeyi Klonlayın
+
+```bash
+git clone https://github.com/keskin-ugur/campus-exchange.git
+cd campus-exchange
+```
+
+### 2. Gerekli Paketleri Yükleyin
+
+```bash
+npm install
+```
+
+### 3. Çevresel Değişkenleri (.env) Ayarlayın
+
+Projenin ana dizininde `.env` adında bir dosya oluşturun ve aşağıdaki değişkenleri ekleyin:
+
+```env
+# Veritabanı Bağlantı Adresi (Localhost veya Neon/Supabase)
+DATABASE_URL="postgresql://kullanici_adi:sifre@localhost:5432/campus_db"
+
+# Google AI Studio'dan alınan API Anahtarı
+GOOGLE_API_KEY="AIzaSy_SENIN_API_KEYIN_BURAYA"
+```
+
+### 4. Veritabanını Oluşturun
+
+Prisma şemasını veritabanına uygulayın:
+
+```bash
+npx prisma db push
+```
+
+### 5. Uygulamayı Başlatın
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcınızda `http://localhost:3000` adresine giderek projeyi görüntüleyebilirsiniz.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 AI Modülü Nasıl Çalışıyor?
 
-## Learn More
+Projedeki "Akıllı Not Kontrolü" şu mantıkla işler:
 
-To learn more about Next.js, take a look at the following resources:
+1. Kullanıcı bir metin veya not girer.
+2. Metin, Next.js Server Action üzerinden sunucuya gönderilir.
+3. Sunucu, metni Google Gemini Pro modeline özel bir "System Prompt" ile iletir.
+   - **Prompt:** "Bu metni analiz et, ders notu olup olmadığını JSON formatında `{"isValid": boolean, "reason": string}` olarak döndür."
+4. Eğer AI onayı verirse not veritabanına kaydedilir, aksi takdirde kullanıcıya reddedilme sebebi gösterilir.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Katkıda Bulunma
 
-## Deploy on Vercel
+Projeye katkıda bulunmak isterseniz:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Bu repoyu Fork'layın.
+2. Yeni bir branch oluşturun (`git checkout -b feature/YeniOzellik`).
+3. Değişikliklerinizi commit edin.
+4. Branch'inizi Push edin ve bir Pull Request (PR) oluşturun.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📝 Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır.
