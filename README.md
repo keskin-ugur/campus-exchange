@@ -36,7 +36,7 @@ Bu platform önemli bir soruna çözüm üretmek için tasarlanmıştır:
 
 | Kategori | Teknoloji | Açıklama |
 | :--- | :--- | :--- |
-| **Frontend** | ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js&logoColor=white) | App Router & Server Components |
+| **Frontend & Backend** | ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js&logoColor=white) | App Router & Server Components |
 | **Dil** | ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) | Tip güvenliği için |
 | **Stil** | ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | Hızlı UI tasarımı |
 | **Backend & DB** | ![Prisma](https://img.shields.io/badge/-Prisma-2D3748?style=flat&logo=prisma&logoColor=white) | ORM ve Veritabanı Yönetimi |
