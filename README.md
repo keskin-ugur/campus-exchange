@@ -106,7 +106,7 @@ Projedeki "Akıllı Not Kontrolü" şu mantıkla işler:
 
 ## 🤝 Katkıda Bulunma
 
-Projeye katkıda bulunmak isterseniz:
+Projeye katkıda bulunmak ister iseniz:
 
 1. Bu repoyu Fork'layın.
 2. Yeni bir branch oluşturun (`git checkout -b feature/YeniOzellik`).
